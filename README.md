@@ -9,8 +9,7 @@ The goals / steps of this project are the following:
 * Summarize the results with a written report
 
 
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/IR0w4aubpos/0.jpg)]
-(https://www.youtube.com/watch?v=IR0w4aubpos "Video Title")
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/IR0w4aubpos/0.jpg)](https://www.youtube.com/watch?v=IR0w4aubpos "Video Title")
 
 [//]: # (Image References)
 

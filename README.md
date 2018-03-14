@@ -8,6 +8,7 @@ The goals / steps of this project are the following:
 * Test that the model successfully drives around track one without leaving the road
 * Summarize the results with a written report
 
+**Project Video Output**
 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/DcfhG_C9Cqk/0.jpg)](https://www.youtube.com/watch?v=DcfhG_C9Cqk "Self Driving Car Output")
 

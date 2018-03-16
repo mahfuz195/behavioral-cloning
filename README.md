@@ -98,19 +98,19 @@ Here is a visualization of the architecture (note: visualizing the architecture 
 
    End-to-End CNN Model | Filter Size | Max polling size |
   -------------  |-------------  | -------------  | 
- Input Layer | - | 
+ Input Layer input size=(90,320,3) | - | 
  Normalization Layer | - |
  Conv2D Layer  | (5,5) | (2,2) |
  ELU Layer | - |
- Conv2D Layer  | 5,5 | (2,2) |
+ Conv2D Layer  | (5,5) | (2,2) |
  ELU Layer | - |
- Conv2D Layer  | 5,5| (2,2) |
+ Conv2D Layer  | (5,5) | (2,2) |
  ELU Layer | -|
- Conv2D Layer  | 3,3| (1,1) |
+ Conv2D Layer  | (3,3) | (1,1) |
  ELU Layer | -|
- Conv2D Layer  | 3,3| (1,1) |
+ Conv2D Layer  | (3,3) | (1,1) |
  ELU Layer | 
-Dropout(0.5)) |
+Dropout |
 Flatten() |
 FC Layer 100 |
 ELU Layer|

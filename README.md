@@ -52,9 +52,9 @@ The model.py file contains the code for training and saving the convolution neur
 
 #### 1. An appropriate model architecture has been employed
 
-My model consists of a convolution neural network with 3x3 filter sizes and depths between 160 and 320 (model.py lines 18-24) 
+My model consists of a convolution neural network with three 3x3 filter sizes and two 1x1 filters and and depths between 160 and 320 (model.py) 
 
-The model includes Rectified RELU layers to introduce nonlinearity, and the data is normalized in the model using a Keras lambda layer. 
+The model includes Rectified RELU layers to introduce nonlinearity and eliminate vanishing gradiant problem, and the data is normalized in the model using a Keras lambda layer. 
 
 #### 2. Attempts to reduce overfitting in the model
 
@@ -64,7 +64,7 @@ The model was trained and validated on different data sets to ensure that the mo
 
 #### 3. Model parameter tuning
 
-The model used an adam optimizer, so the learning rate was not tuned manually (model.py).
+The model used an adam optimizer, so the learning rate was not tuned manually (model.py). I used the defaul learning rate of adam optimized (0.001)
 
 #### 4. Appropriate training data
 
@@ -76,23 +76,17 @@ For details about how I created the training data, see the next section.
 
 #### 1. Solution Design Approach
 
-The overall strategy for deriving a model architecture was to ...
+The overall strategy for deriving a model architecture was to build a CNN model based on the paper of NVIDIA end-to-end selft driving car model. [Paper Link](https://arxiv.org/pdf/1604.07316.pdf)
 
-My first step was to use a convolution neural network model similar to the NVIDIA end-to-end driving model. I thought this model might be appropriate because ...
+My first step was to use a convolution neural network model similar to the NVIDIA end-to-end driving model. I thought this model might be appropriate because It learns the entire processing pipeline needed to steer an automobile which is called as end-to-end modeling. Though, I have modified the archtecure so that it fits the input image sizes.  
 
-In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. I found that my first model had a low mean squared error on the training set but a high mean squared error on the validation set. This implied that the model was overfitting. 
+In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. I found that my first model had a low mean squared error on the training set but a high mean squared error on the validation set. This implied that the model was overfitting. In their last few layers thay have a fully connected layer of 1164 neurons. To combat the overfitting, I have removed it and added dropout of 0.5 to overcome the overfitting problem. I tried with different dropout rate and came up with 0.5 as the optimal value.
 
-To combat the overfitting, I modified the model so that ...
-
-Then I ... 
-
-The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track... to improve the driving behavior in these cases, I ....
-
-At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
+The final step is to run the simulator to see how well the car is driving around track one. In my model, I select the graphics quality 'fastest' before running the simulator. In my driver.py the the speed is set to 9 mph as cruising speed and the vehicle is able to drive autonomously around the track without leaving the road.
 
 #### 2. Final Model Architecture
 
-The final model architecture (model.py lines 18-24) consisted of a convolution neural network with the following layers and layer sizes ...
+The final model architecture (model.py) consisted of a 5 convolution layers followed by 3 fully connected layers.
 
 Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
 
@@ -151,6 +145,14 @@ model.add(Cropping2D(cropping=((50,20), (0,0)), input_shape=(160,320,3)))
 
 
 
-I finally randomly shuffled the data set and put Y% of the data into a validation set. 
+I finally trained the model using fit generator with the split of 80%, and 30% with training and validation dataset.
+```sh
+model.fit_generator(train_generator, samples_per_epoch= 
+            len(train_samples), validation_data=validation_generator, 
+            nb_val_samples=len(validation_samples), nb_epoch=25)
+```
 
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 25 as evidenced by following graph I used an adam optimizer so that manually training the learning rate wasn't necessary.
+
+![alt text][image9]
+

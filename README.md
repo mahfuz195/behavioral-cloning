@@ -16,11 +16,13 @@ The goals / steps of this project are the following:
 
 [image1]: ./examples/placeholder.png "Model Visualization"
 [image2]: ./examples/placeholder.png "Grayscaling"
-[image3]: ./examples/placeholder_small.png "Recovery Image"
-[image4]: ./examples/placeholder_small.png "Recovery Image"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
-[image6]: ./examples/placeholder_small.png "Normal Image"
-[image7]: ./examples/placeholder_small.png "Flipped Image"
+[image3]: ./examples/center_camera.png "Center Camera Image"
+[image4]: ./examples/left_camera.png "Left CameraImage"
+[image5]: ./examples/right_camera.png "Right Camera Image"
+[image6]: ./examples/flipped_center_camera.png "Flipped Center Camera Image"
+[image7]: ./examples/flipped_left_camera.png "Flipped Left Camera Image"
+[image8]: ./examples/flipped_right_camera.png "Flipped Right Camera Image"
+"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  

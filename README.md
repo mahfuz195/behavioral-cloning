@@ -115,7 +115,6 @@ FC Layer 10|
 ELU Layer |
 FC Layer 1|
   
-![alt text][image1]
 
 #### 3. Creation of the Training Set & Training Process
 

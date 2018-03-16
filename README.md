@@ -22,6 +22,7 @@ The goals / steps of this project are the following:
 [image6]: ./examples/flipped_center_camera.png "Flipped Center Camera Image"
 [image7]: ./examples/flipped_left_camera.png "Flipped Left Camera Image"
 [image8]: ./examples/flipped_right_camera.png "Flipped Right Camera Image"
+[image9]: ./examples/validation.png "Training and Validation loss"
 "
 
 ## Rubric Points

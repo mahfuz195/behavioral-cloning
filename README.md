@@ -96,19 +96,19 @@ The final model architecture (model.py lines 18-24) consisted of a convolution n
 
 Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
 
-   End-to-End CNN Model | 
-  -------------  |
- Input Layer |
- Normalization Layer |
- Conv2D Layer  | 
- ELU Layer | 
- Conv2D Layer  | 
- ELU Layer | 
- Conv2D Layer  | 
- ELU Layer | 
- Conv2D Layer  | 
- ELU Layer | 
- Conv2D Layer  | 
+   End-to-End CNN Model | Filter Size |
+  -------------  |-------------  |
+ Input Layer | - |
+ Normalization Layer | - |
+ Conv2D Layer  | 5,5 |
+ ELU Layer | - |
+ Conv2D Layer  | 5,5 | 
+ ELU Layer | - |
+ Conv2D Layer  | 5,5| 
+ ELU Layer | -|
+ Conv2D Layer  | 3,3| 
+ ELU Layer | -|
+ Conv2D Layer  | 3,3| 
  ELU Layer | 
 Dropout(0.5)) |
 Flatten() |

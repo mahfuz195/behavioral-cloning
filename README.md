@@ -119,7 +119,12 @@ To augment the data sat, I also flipped images and angles thinking that this wou
 
 Etc ....
 
-After the collection process, I had X number of data points. I then preprocessed this data by ...
+After the collection process, I had 48216 number of data points. I then preprocessed this data by 1) Normalization using Lambda layer , and 2) Croping the top 50 pixels and bottom 20 pixels as they are not necessary to train the model.
+```sh
+model.add(Lambda(lambda x: x/127.5 - 1.,input_shape=(row, col, ch),output_shape=(row, col, ch)))
+model.add(Cropping2D(cropping=((50,20), (0,0)), input_shape=(160,320,3)))
+```
+
 
 
 I finally randomly shuffled the data set and put Y% of the data into a validation set. 

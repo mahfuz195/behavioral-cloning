@@ -96,6 +96,15 @@ The final model architecture (model.py lines 18-24) consisted of a convolution n
 
 Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
 
+   Case | 
+  -------------  |
+  1  |
+  2  | 
+  3  | 
+  4  |
+  5  | 
+  6  | 
+  
 ![alt text][image1]
 
 #### 3. Creation of the Training Set & Training Process

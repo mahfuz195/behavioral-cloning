@@ -136,8 +136,6 @@ To augment the data sat, I also flipped images and angles thinking that this wou
 ![alt text][image7]
 ![alt text][image8]
 
-Etc ....
-
 After the collection process, I had 48216 number of data points. I then preprocessed this data by 1) Normalization using Lambda layer , and 2) Croping the top 50 pixels and bottom 20 pixels as they are not necessary to train the model.
 ```sh
 model.add(Lambda(lambda x: x/127.5 - 1.,input_shape=(row, col, ch),output_shape=(row, col, ch)))

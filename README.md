@@ -155,3 +155,7 @@ I used this training data for training the model. The validation set helped dete
 
 ![alt text][image9]
 
+Further Improvement
+----
+With the model that I have developed has few limitaitons. In Simulator, if I select the graphics option other than fastest the vehcile goes off track. I think I need to train the model more and collect more dataset for this to fix. Also, I have not considered the Track two for this model during training and testing. Furthermore, I want to try the model with ResNet archtecture to test how it works. But it was fun to see the effect of a deep learning into action with an autonomous vehicle. 
+
